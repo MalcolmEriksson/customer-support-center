@@ -20,6 +20,10 @@ export class CaseDbService {
         return this.caseModel.find({ state: CaseState.OPEN }).exec();
     }
 
+    async findActiveAndUnassigned(): Promise<Case> {
+        return this.caseModel.findOne({ state: CaseState.OPEN, agentId: undefined }).exec();
+    }
+
     async resolveCase(caseId: string): Promise<Case> {
         return this.caseModel.findOneAndUpdate({ _id: caseId }, { state: CaseState.CLOSED });
     }

@@ -19,7 +19,12 @@ export class CaseAgentService {
         const activeAgent = await this.agentDb.findAgent(activeAgentId);
         if (activeAgent?.caseWrite) {
             await this.caseDb.resolveCase(caseId);
-            await this.agentDb.unassignCase(caseId);
+            const unassignedAgent = await this.agentDb.unassignCase(caseId);
+            const newCase = await this.caseDb.findActiveAndUnassigned();
+            if (newCase) {
+                await this.caseDb.assignCase(newCase._id, unassignedAgent.agentId);
+                await this.agentDb.assignAgent(newCase._id, unassignedAgent.agentId);
+            }
         } else {
             throw new HttpException(`Not sufficient access`, 403);
         }
