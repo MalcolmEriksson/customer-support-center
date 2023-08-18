@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "895d334b-c17f-4fe9-83b9-f4a9225efb25",
+		"name": "AssignmentCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20465460"
+	},
+	"item": [
+		{
+			"name": "Guest: Return item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJwYXJ0eVVpZCI6IjllNjY5MmU0LWI4NDYtNGJjNi1iZDFiLTAxZjg1M2NiZjYxZiJ9.thk9PQmFG0eMgDx64_PyTf3XjOvPeXd3GW66vEojebk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"orderId\": \"testOrderID\",\n    \"productId\": \"123\",\n    \"quantity\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/guest/return",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"guest",
+						"return"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Office-agent: Add agent",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJwYXJ0eVVpZCI6Ijc5YmFkODgzLWJhNGQtNGIyNi05ODRkLTJmMmFkYTdmNDg4OCJ9.BRCncGz__LzDvjvAVwY8d1w3lRXTr6UOXK5Fnf3ERFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"agentId\": \"79bad883-ba4d-4b26-984d-2f2ada7f4888\",\n    \"caseRead\": true,\n    \"caseWrite\": true,\n    \"agentWrite\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/office-agent/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"office-agent",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Office-agent: Update agent",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJwYXJ0eVVpZCI6Ijc5YmFkODgzLWJhNGQtNGIyNi05ODRkLTJmMmFkYTdmNDg4OCJ9.BRCncGz__LzDvjvAVwY8d1w3lRXTr6UOXK5Fnf3ERFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"agentId\": \"79bad883-ba4d-4b26-984d-2f2ada7f488\",\n    \"caseRead\": true,\n    \"caseWrite\": true,\n    \"agentWrite\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/office-agent/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"office-agent",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Office-agent: Delete agent",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJwYXJ0eVVpZCI6Ijc5YmFkODgzLWJhNGQtNGIyNi05ODRkLTJmMmFkYTdmNDg4OCJ9.BRCncGz__LzDvjvAVwY8d1w3lRXTr6UOXK5Fnf3ERFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/office-agent/remove/:id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"office-agent",
+						"remove",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "79bad883-ba4d-4b26-984d-2f2ada7f4888"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Office-agent: List all agents",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJwYXJ0eVVpZCI6Ijc5YmFkODgzLWJhNGQtNGIyNi05ODRkLTJmMmFkYTdmNDg4OCJ9.BRCncGz__LzDvjvAVwY8d1w3lRXTr6UOXK5Fnf3ERFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/office-agent/list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"office-agent",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Case-agent: Resolve case",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJwYXJ0eVVpZCI6Ijc5YmFkODgzLWJhNGQtNGIyNi05ODRkLTJmMmFkYTdmNDg4OCJ9.BRCncGz__LzDvjvAVwY8d1w3lRXTr6UOXK5Fnf3ERFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/case-agent/resolve/:id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"case-agent",
+						"resolve",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "64de39ad79d00de5724a9c93"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Case-agent: List all active cases",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJwYXJ0eVVpZCI6Ijc5YmFkODgzLWJhNGQtNGIyNi05ODRkLTJmMmFkYTdmNDg4OCJ9.BRCncGz__LzDvjvAVwY8d1w3lRXTr6UOXK5Fnf3ERFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/case-agent/list-active",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"case-agent",
+						"list-active"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJwYXJ0eVVpZCI6IjllNjY5MmU0LWI4NDYtNGJjNi1iZDFiLTAxZjg1M2NiZjYxZiJ9.thk9PQmFG0eMgDx64_PyTf3XjOvPeXd3GW66vEojebk",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
